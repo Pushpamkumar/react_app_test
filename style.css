@@ -1,48 +1,57 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
 }
 
-h1 {
-    font-size: 24px;
-    margin-top: 10px;
-}
-
-#turn-indicator {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px;
-}
-
-#chess-board {
+#chessboard {
     width: 400px;
     margin: 20px auto;
 }
 
-#captured-pieces {
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    border: 5px solid black;
+    margin: auto;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
+    font-size: 32px;
 }
 
-#white-captured, #black-captured {
-    font-size: 16px;
-    font-weight: bold;
+.white {
+    background-color: #fff;
 }
 
-button {
-    padding: 10px 15px;
+.black {
+    background-color: #666;
+    color: white;
+}
+
+.highlight {
+    background-color: yellow !important;
+}
+
+#restart {
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
-button:hover {
+#restart:hover {
     background-color: #0056b3;
 }
